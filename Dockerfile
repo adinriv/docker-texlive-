@@ -24,7 +24,7 @@ RUN apt-get update -qq &&\
 
 COPY install-tl-ubuntu.patch .
 
-RUN git clone https://github.com/scottkosty/install-tl-ubuntu.git &&\
+RUN git clone --depth=1 https://github.com/scottkosty/install-tl-ubuntu.git &&\
     chmod +x ./install-tl-ubuntu/install-tl-ubuntu &&\
     patch ./install-tl-ubuntu/install-tl-ubuntu < install-tl-ubuntu.patch &&\
     ./install-tl-ubuntu/install-tl-ubuntu &&\
