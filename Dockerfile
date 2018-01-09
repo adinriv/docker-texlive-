@@ -1,7 +1,7 @@
 FROM adnrv/minimal-texlive
 MAINTAINER adin
 
-RUN   tlmgr update --self &&\
+RUN   tlmgr update --self --all --reinstall-forcibly-removed &&\
       tlmgr install \
       # Collections of basic stuff
       collection-basic \
